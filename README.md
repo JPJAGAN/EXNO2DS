@@ -1,6 +1,4 @@
 # EXNO2DS
-# NAME.- JAGAN JP
-# REG NO.- 212224230099
 # AIM:
       To perform Exploratory Data Analysis on the given data set.
       
@@ -25,113 +23,21 @@ STEP 7: Use cross tabulation method to quantitatively analyze the relationship b
 STEP 8: Use heatmap method of representation to show relationships between two variables, one plotted on each axis.
 
 ## CODING AND OUTPUT
-               ```py
-  import pandas as pd
-  import numpy as np
-  import matplotlib.pyplot as plt
-  import seaborn as sns
-  dt=pd.read_csv("/content/titanic_dataset.csv")
-  dt
- ```
-         
-![Screenshot 2024-09-13 153035](https://github.com/user-attachments/assets/c1271d70-c329-46c5-aced-a9715ca69a2a)
-
-```py
-        dt.info()
-```
-![Screenshot 2024-09-13 153240](https://github.com/user-attachments/assets/279a8c67-aafb-42aa-b01e-d0ef028d425c)
-
- ```py
-      dt.shape
-
- ```
-![Screenshot 2024-09-13 154013](https://github.com/user-attachments/assets/6f32b99d-518b-4031-a5ea-3b0078a6ccc9)
-
- ```py
-      df.set_index("PassengerId",inplace=True)
-      df.describe()
-  ```
-![Screenshot 2024-09-13 160702](https://github.com/user-attachments/assets/d2e8cb24-0137-427a-ac3b-a575519b190e)
-
-```py
-  df.nunique()
-```
-![Screenshot 2024-09-13 160754](https://github.com/user-attachments/assets/29bf2dd5-e2d7-42be-a1ff-25a8dab14f8c)
-
-```py
-  df["Survived"].value_counts()     
-
-```
-![Screenshot 2024-09-13 160850](https://github.com/user-attachments/assets/69e47624-7295-448c-a285-ab131411e932)
-
-```py
-   per=(df["Survived"].value_counts()/df.shape[0]*100).round(2)
-   per      
-```
-![Screenshot 2024-09-13 160934](https://github.com/user-attachments/assets/e99b9af6-30e4-4f52-9b50-c35824373683)
-
-```py
-  sns.countplot(data=df,x="Survived")     
-```
-![Screenshot 2024-09-13 161026](https://github.com/user-attachments/assets/5a14144c-0309-4329-afb2-13cdce3fd9de)
-
-```py
-   df.Pclass.unique()
-```
-![Screenshot 2024-09-13 161132](https://github.com/user-attachments/assets/6bc169b8-77ba-4790-b314-a23f347b160d)
-
-
-```py
-   sns.catplot(x="Sex",col="Survived",kind="count",data=df,height=5,aspect=.7)
-```
-![Screenshot 2024-09-13 161340](https://github.com/user-attachments/assets/887552ba-5687-4ca2-851d-641ab142b27d)
-
-```py
-    sns.catplot(x="Survived",hue="Sex",data=df,kind="count")
-```
-![Screenshot 2024-09-13 161503](https://github.com/user-attachments/assets/20f0a2f0-fa30-4555-a786-0eb1606a6220)
-
-
-```py
-  df.boxplot(column="Age",by="Survived")
-```
-![Screenshot 2024-09-13 161645](https://github.com/user-attachments/assets/2da4c88b-e79c-42c6-988c-9e0638059813)
-
-```py
-sns.scatterplot(x=df["Age"],y=df["Fare"])
-```
-![Screenshot 2024-09-13 161738](https://github.com/user-attachments/assets/ae61a369-2f04-4135-acc2-7bd278430d1d)
-
-```py
-  sns.jointplot(x="Age",y="Fare",data=df)
-```
-![Screenshot 2024-09-13 161821](https://github.com/user-attachments/assets/5f3c7cb0-29da-4a46-8649-be168769b895)
-
-```py
-fig, ax1 = plt.subplots(figsize=(8,5))
-plt = sns.boxplot(ax=ax1,x='Pclass',y='Age',hue='Sex',data=df)
-```
-![Screenshot 2024-09-13 162022](https://github.com/user-attachments/assets/629d80b0-e56b-484a-9d06-50a40ecd1f7e)
-
-```py
- sns.catplot(data=df,col="Survived",x="Sex",hue="Pclass",kind="count")
-```
-![Screenshot 2024-09-13 162139](https://github.com/user-attachments/assets/fa5e1102-fe95-4386-a75e-8e767b376149)
-
-
-```py
-numeric_df = df.select_dtypes(include=[np.number])
-corr = numeric_df.corr()
-sns.heatmap(corr, annot=True)
-```
-![Screenshot 2024-09-13 162225](https://github.com/user-attachments/assets/3c939c8a-4423-4b0e-9302-159e27e0105a)
-
-```py
-  sns.pairplot(df)
-```
-![dsex02](https://github.com/user-attachments/assets/1974c5ba-dabc-437b-be8d-be64184e15fd)
-
-
+<img width="902" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/1c921e54-8ab5-490a-bbb6-b9e0147bf026">
+<img width="865" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/09b2b60a-076d-44b9-a686-98504ee89e1f">
+<img width="917" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/b3841270-8f78-4466-8c24-0bd6ac8adf66">
+<img width="487" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/4c6af487-5f84-4be5-b450-a76c8b9be074">
+<img width="920" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/c61b63dd-64a9-4c2a-946c-7cf35ed30a8b">
+<img width="845" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/2222ad39-83e3-4a4c-afa4-8a4428a60f1a">
+<img width="864" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/386d8bf6-7b52-469d-8018-2edff6d5ce21">
+<img width="860" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/71921f93-e7df-4221-a4b5-74497a04be9c">
+<img width="747" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/e114cb32-4c8f-4636-b9e1-e9b9ecc544ca">
+<img width="825" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/2483e3a0-8ba8-4597-9a11-6987ab1c8e86">
+<img width="886" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/d8542d7c-f05a-4f17-a579-20c786f97a53">
+<img width="905" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/51d26e2f-00b6-48ea-b510-c75dc0dd21ef">
+<img width="884" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/3c70fb2a-0de7-4add-83bf-c474e793eca9">
+<img width="919" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/4886fd51-b40c-4050-8106-b5c77e3d4800">
+<img width="897" alt="image" src="https://github.com/1808charitha/EXNO2DS/assets/132996838/cc87347f-721a-42c7-8c9a-0c2364417063">
 
 # RESULT
-Exploratory Data Analysis on the given data set is completed successfully.
+Thus the data analysis has been implemented succesfully.
